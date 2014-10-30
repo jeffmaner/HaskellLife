@@ -12,8 +12,7 @@ newtype Grid = Grid [[State]] deriving (Eq, Show)
 
 generation :: (State, Int) -> State
 generation (Alive, 2) = Alive
-generation (Alive, 3) = Alive
-generation (Dead , 3) = Alive
+generation (_    , 3) = Alive
 generation (_    , _) = Dead
 
 -- I know this can be done more cleanly...
